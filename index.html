@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div style="display: flex;flex-direction:row;gap: 100px;">
+       <div style="height:100px;width: 100px;background-color: red;" id="dv1">
+           <h1 id="h1" style="text-align: center;">Hello</h1>
+       </div>
+       
+     <section style="display:flex;flex-direction: column;justify-content: center; gap: 20px;">
+      <button id="bt1" onclick="push()"><i class="fa-sharp fa-solid fa-arrow-right"></i></button>
+      <button id="bt2" onclick="pop()"><i class="fa-sharp fa-solid fa-arrow-left"></i></button>
+     </section>
+
+      <div style="height:100px;width: 100px;background-color: green;" id="dv2"></div>
+    </div>
+<script>
+    function push(){
+        data = document.getElementById("dv1").innerHTML;
+        document.getElementById("dv1").innerHTML="";
+
+        document.getElementById("dv2").innerHTML = data; 
+    }
+
+    function pop(){
+        data = document.getElementById("dv2").innerHTML;
+        document.getElementById("dv2").innerHTML="";
+
+        document.getElementById("dv1").innerHTML = data; 
+    }
+
+</script>
+
+</body>
+</html>
